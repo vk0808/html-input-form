@@ -10,59 +10,105 @@
   <body>
     <header class="headerContainer"><h1>HTML 5 Input Form</h1></header>
     <form class="formContainer">
-      <div>
-        <label for="text">Name:</label>
-        <input type="text" id="text" name="text" />
-        <error-output class="text-error" for="text"></error-output>
+      <div class="form-input">
+        <div class="form-left">
+          <label for="text">Name:</label>
+        </div>
+        <div class="form-right">
+          <input type="text" id="text" name="text" required />
+          <error-output class="text-error" for="text"></error-output>
+        </div>
       </div>
-      <div>
-        <label for="pwd">Password: </label>
-        <input type="password" id="pwd" name="pwd" required />
-        <error-output for="pwd" class="pwd-error"></error-output>
+      <div class="form-input">
+        <div class="form-left">
+          <label for="pwd">Password: </label>
+        </div>
+        <div class="form-right">
+          <input type="password" id="pwd" name="pwd" required />
+          <error-output for="pwd" class="pwd-error"></error-output>
+        </div>
       </div>
-      <div>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" />
-        <error-output for="email" class="email-error"></error-output>
+      <div class="form-input">
+        <div class="form-left">
+          <label for="email">Email:</label>
+        </div>
+        <div class="form-right">
+          <input type="email" id="email" name="email" required />
+          <error-output for="email" class="email-error"></error-output>
+        </div>
       </div>
-      <div>
-        <label for="url">URL:</label>
-        <input type="url" id="url" name="url" />
+      <div class="form-input">
+        <div class="form-left">
+          <label for="url">URL:</label>
+        </div>
+        <div class="form-right">
+          <input type="url" id="url" name="url" required />
+        </div>
       </div>
-      <div>
-        <label for="number">Age:</label>
-        <input type="number" id="number" name="number" />
-        <error-output for="number" class="number-error"></error-output>
+      <div class="form-input">
+        <div class="form-left">
+          <label for="number">Age:</label>
+        </div>
+        <div class="form-right">
+          <input type="number" id="number" name="number" required />
+        </div>
+        <div class="error-msg">
+          <error-output for="number" class="number-error"></error-output>
+        </div>
       </div>
-      <div>
-        <label for="tel">Telephone:</label>
-        <input type="tel" id="tel" name="tel" />
+      <div class="form-input">
+        <div class="form-left">
+          <label for="tel">Telephone:</label>
+        </div>
+        <div class="form-right">
+          <input type="tel" id="tel" name="tel" required />
+        </div>
       </div>
-      <div>
-        <label for="search">Search: </label>
-        <input type="search" id="search" name="search" />
+      <div class="form-input">
+        <div class="form-left">
+          <label for="search">Search: </label>
+        </div>
+        <div class="form-right">
+          <input type="search" id="search" name="search" required />
+        </div>
       </div>
-      <div class="nativeDateTimePicker">
-        <label for="startDate">Choose a date and time:</label>
-        <input type="datetime-local" id="startDate" name="startDate" />
-        <span class="validity"></span>
+      <div class="nativeDateTimePicker form-input">
+        <div class="form-left">
+          <label for="startDate">Choose a date and time:</label>
+        </div>
+        <div class="form-right">
+          <input
+            type="datetime-local"
+            id="startDate"
+            name="startDate"
+            required
+          />
+          <span class="validity"></span>
+        </div>
       </div>
-      <div>
-        <label for="salary">Choose your salary</label>
-        <input
-          type="range"
-          name="salary"
-          id="salary"
-          min="300000"
-          max="500000"
-          step="100"
-          value="400000"
-        />
-        <output class="salary-output" for="salary">400000</output>
+      <div class="form-input">
+        <div class="form-left">
+          <label for="salary">Choose your salary</label>
+        </div>
+        <div class="salary">
+          <input
+            type="range"
+            name="salary"
+            id="salary"
+            min="300000"
+            max="500000"
+            step="100"
+            value="400000"
+            required
+          />
+          <output class="salary-output" for="salary">400000</output>
+        </div>
       </div>
-      <div>
+      <div class="form-input">
         <button class="btn">Submit</button>
       </div>
     </form>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>

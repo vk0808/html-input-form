@@ -19,11 +19,15 @@ body {
 .formContainer {
   margin-top: 50px;
 }
-.formContainer div {
+.formContainer .form-input {
   margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.form-right {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 .formContainer label,
 .formContainer input,
@@ -40,9 +44,15 @@ body {
   flex: auto;
 }
 .formContainer error-output {
+  display: block;
   font-size: 12px;
   font-style: italic;
   color: red;
+}
+.salary {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
 }
 .btn {
   cursor: pointer;
