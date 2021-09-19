@@ -20,5 +20,16 @@ email.addEventListener('input', function () {
   if (pattern.test(email.value))
     emailError.textContent = "";
   else
-    emailError.textContent = "Ex-abc.xyz@ybl.com, need 3 mandatory parts(abc, ybl, com), 2 optional(xyz & in) with precise @ and .positions";
+    emailError.textContent = "E.g.: abc.xyz@ybl.com, need 3 mandatory parts(abc, ybl, com), 2 optional(xyz & in) with precise @ and .positions";
+});
+
+const number = document.querySelector('#tel');
+const numberError = document.querySelector('.tel-error');
+
+number.addEventListener('input', function () {
+  let numberPattern = RegExp('^[1-9]{1}[0-9]{1}\\s[1-9]{1}[0-9]{9}$');
+  if (numberPattern.test(number.value))
+    numberError.textContent = "";
+  else
+    numberError.textContent = "E.g.: 91 9919819801 - Country code follow by space and 10 digit number";
 });
