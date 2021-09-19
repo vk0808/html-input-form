@@ -6,5 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Input Form</title>
   </head>
-  <body></body>
+  <body>
+    <header class="headerContainer"><h1>HTML 5 Input Form</h1></header>
+    <form class="formContainer">
+      <div>
+        <label for="text">Name:</label>
+        <input type="text" id="text" name="text" />
+        <error-output class="text-error" for="text"></error-output>
+      </div>
+      <div>
+        <label for="pwd">Password: </label>
+        <input type="password" id="pwd" name="pwd" required />
+        <error-output for="pwd" class="pwd-error"></error-output>
+      </div>
+      <div>
+        <label for="email">email input type:</label>
+        <input type="email" id="email" name="email" />
+        <error-output for="email" class="email-error"></error-output>
+      </div>
+      <div>
+        <label for="url">url input type:</label>
+        <input type="url" id="url" name="url" />
+      </div>
+      <div>
+        <label for="number">number input type:</label>
+        <input type="number" id="number" name="number" />
+        <error-output for="number" class="number-error"></error-output>
+      </div>
+      <div>
+        <label for="tel">tel input type:</label>
+        <input type="tel" id="tel" name="tel" />
+      </div>
+      <div>
+        <label for="search">Search input type: </label>
+        <input type="search" id="search" name="search" />
+      </div>
+      <div class="nativeDateTimePicker">
+        <label for="startDate">Choose a date and time:</label>
+        <input type="datetime-local" id="startDate" name="startDate" />
+        <span class="validity"></span>
+      </div>
+      <div>
+        <label for="salary">Choose your salary</label>
+        <input
+          type="range"
+          name="salary"
+          id="salary"
+          min="300000"
+          max="500000"
+          step="100"
+          value="400000"
+        />
+        <output class="salary-output" for="salary">400000</output>
+      </div>
+      <div>
+        <button>submit</button>
+      </div>
+    </form>
+  </body>
 </html>
