@@ -49,3 +49,12 @@ pwd.addEventListener('input', function () {
   else
     passwordError.textContent = "minimum 8 Characters, atleast 1 Upper Case, atleast 1 numeric, exactly 1 Special Character";
 });
+
+
+// Update salary based on slider
+const salary = document.querySelector('#salary');
+const salaryOutput = document.querySelector('.salary-output');
+salaryOutput.textContent = salary.value;
+salary.addEventListener('input', function () {
+  salaryOutput.textContent = salary.value;
+})
