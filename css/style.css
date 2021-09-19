@@ -23,6 +23,7 @@ body {
   margin-bottom: 20px;
   display: grid;
   grid-template-columns: 1fr 2fr;
+  gap: 0.5rem;
 }
 .form-right {
   display: flex;
@@ -37,7 +38,6 @@ body {
 }
 .formContainer label {
   text-align: left;
-  width: 30%;
   margin-right: 2%;
 }
 .formContainer input {
@@ -66,4 +66,21 @@ body {
 }
 .btn:hover {
   background-color: rgba(0, 96, 223, 1);
+}
+@media screen and (max-width: 576px) {
+  body {
+    width: auto;
+    max-width: auto;
+  }
+  h1 {
+    font-size: 2.15rem;
+    text-align: center;
+  }
+  .formContainer label {
+    font-size: 1rem;
+  }
+  .salary {
+    gap: 1rem;
+    flex-direction: column;
+  }
 }
